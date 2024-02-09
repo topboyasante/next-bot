@@ -10,10 +10,10 @@ export default function RootLayout({
   return (
     <main>
       <section className="flex w-screen h-screen">
-        <section className="hidden md:block md:w-[18%] h-full">
+        {/* <section className="hidden md:block md:w-[18%] h-full">
           <SideBar />
-        </section>
-        <section className="w-full md:w-[82%]">
+        </section> */}
+        <section className="w-full h-full">
           <TopNavbar />
           {children}
         </section>
