@@ -27,8 +27,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <TopNavbar/>
-            {children}
+            <main className="w-screen h-screen relative">
+              <TopNavbar />
+              {children}
+            </main>
           </ThemeProvider>
         </QueryProvider>
       </body>
