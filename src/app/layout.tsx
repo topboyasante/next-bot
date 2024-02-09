@@ -27,7 +27,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="w-screen h-screen relative">
+            <main className="w-screen h-[100dvh] relative">
               <TopNavbar />
               {children}
             </main>
