@@ -10,8 +10,7 @@ import Loader from "../ui/loader";
 function MessageSender() {
   const addMessage = useBotStore((state) => state.addMessage);
 
-  const { sendMessage, isSendingMessage } =
-    useMutationRequest("messages");
+  const { sendMessage, isSendingMessage } = useMutationRequest("messages");
 
   const {
     register,
@@ -32,8 +31,10 @@ function MessageSender() {
       <form onSubmit={handleSubmit(onSubmit)} className="p-5">
         <div className="max-w-screen-md mx-auto flex items-center gap-5">
           <Input
-            {...register("message")}
-            placeholder="Message NextBotty..."
+            {...register("message", { required: "This field is required!" })}
+            placeholder={
+              errors.message ? errors.message.message : "Message Botty..."
+            }
             disabled={isSendingMessage}
           />
           <Button type="submit" disabled={isSendingMessage}>
